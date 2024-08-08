@@ -10,7 +10,7 @@ class SDOFOscillator:
         self.k = k
         self.h = h
         self.duration = time_duration
-        self.x0 = 0.08
+        self.x0 = 0.05
         self.z0 = 0.0
         self.x0_prime = 0.0
         self.t = []
@@ -93,9 +93,6 @@ class SDOFOscillator:
 
     def get_title(self):
         return self.title
-
-    def get_h(self):
-        return self.h
 
     def plot_values(self):
         plt.figure(figsize=(12, 4))
