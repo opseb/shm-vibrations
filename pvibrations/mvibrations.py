@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 class SDOFOscillator:
 
-    def __init__(self, m, c, k, h=0.0001, time_duration=2 ):
+    def __init__(self, m, c, k, h=0.0001, time_duration=1):
         self.m = m
         self.c = c
         self.k = k
@@ -40,7 +40,7 @@ class SDOFOscillator:
 
         xt = []
 
-        time = np.arange(0.0, self.duration, 0.0001)
+        time = np.arange(0, self.duration, self.h)
 
         for i in range(len(time)):
             xt_new = math.exp(-chi * wn * time[i]) * \
